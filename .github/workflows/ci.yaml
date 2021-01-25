@@ -32,6 +32,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
+          rm -rf dist && mkdir dist
           echo 'built on' > dist/artifact.txt
           uname >> dist/artifact.txt
           echo 'test, and deploy your project' >> dist/artifact.txt
